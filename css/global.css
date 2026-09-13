@@ -1,0 +1,94 @@
+/* ==========================================
+   RESET Y VARIABLES GLOBALES
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-fondo: #fbf9f5;        /* Blanco cálido tono papel */
+    --color-texto: #222222;        /* Negro suave */
+    --color-suave: #666666;        /* Gris secundario */
+    --color-acento: #2a4338;       /* Verde editorial profundo */
+    --fuente-titulo: 'Cormorant Garamond', serif;
+    --fuente-cuerpo: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-cuerpo);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+
+
+}
+
+    
+/* ==========================================
+   FORZAR BOTONES A LA DERECHA
+   ========================================== */
+.destacado-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.destacado-imagen {
+    flex: 0 0 220px;
+    text-align: center;
+}
+
+.imagen-portada-real {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 10px 15px 30px rgba(0,0,0,0.15);
+}
+
+
+
+.contenedor-botones-compra {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: 1.5rem 0;
+    justify-content: flex-start; /* Asegura que los botones arranquen desde la izquierda de su bloque */
+}
+
+.btn-comprar {
+    background-color: var(--color-acento);
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-comprar:hover {
+    background-color: #1f3229;
+}
+
+.btn-carrito {
+    background-color: transparent;
+    color: var(--color-texto);
+    border: 1px solid var(--color-texto);
+    padding: 0.75rem 1.2rem;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-carrito:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+

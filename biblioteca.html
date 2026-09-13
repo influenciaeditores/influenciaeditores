@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Biblioteca - Mis Libros</title>
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/biblioteca.css">
+</head>
+<body>
+
+  <!-- Tu Header existente -->
+
+  <main class="biblioteca-container">
+    <header class="biblioteca-header">
+      <a href="index.html" class="logo-enlace">
+        <img src="logo.png" alt="Logo Influenciaeditores" class="imagen-logo">
+      </a>
+
+      <div class="titulo-seccion">
+        <h1 style="font-family: 'Inter', sans-serif; text-align: center;">Mi Biblioteca Digital</h1>
+        <p style="font-family: 'Cormorant Garamond', serif; text-align: center; font-size: 1.3rem; color: #666;">
+          Aquí encontrarás las obras que has adquirido listas para su lectura.
+        </p>
+      </div>
+    </header>
+
+    <!-- Contenedor para cuando NO haya libros comprados -->
+    <div id="mensaje-vacio" style="display: none; text-align: center; margin: 3rem 0;">
+      <h3>Aún no tienes libros en tu biblioteca.</h3>
+      <p style="color: #666; margin: 1rem 0;">Explora nuestro catálogo y adquiere tu primera publicación.</p>
+      <a href="catalogo.html" class="btn-read" style="display: inline-block; width: auto; padding: 0.8rem 1.5rem;">Ir al Catálogo</a>
+    </div>
+
+    <!-- Grid con la colección de libros comprados -->
+    <section class="books-grid" id="grid-libros">
+
+      <!-- Tarjeta de Libro 1 (ID: serpientes) - Oculta por defecto para evitar parpadeo -->
+      <article class="book-card" data-libro-id="serpientes" style="display: none;">
+        <div class="book-cover-wrapper">
+          <img src="portadaSerpientes.png" alt="serpientes" class="book-cover">
+        </div>
+        <div class="book-info">
+          <h2 class="book-title">Serpientes</h2>
+          <p class="book-author">Nombre del Autor</p>
+          <a href="lector.html?libro=libros/serpientes.epub" class="btn-read">Leer ahora</a>
+        </div>
+      </article>
+
+      <!-- Tarjeta de Libro 2 (ID: libro2) - Oculta por defecto para evitar parpadeo -->
+      <article class="book-card" data-libro-id="libro2" style="display: none;">
+        <div class="book-cover-wrapper">
+          <img src="images/portada2.jpg" alt="Portada del libro" class="book-cover">
+        </div>
+        <div class="book-info">
+          <h2 class="book-title">Título del Libro 2</h2>
+          <p class="book-author">Nombre del Autor</p>
+          <a href="lector.html?libro=libro2.epub" class="btn-read">Leer ahora</a>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- Tu Footer existente -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/biblioteca.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,178 @@
+
+/* ==========================================
+   SECCIÓN NOVEDAD / DESTACADO
+   ========================================== */
+.destacado {
+    padding: 6rem 10%;
+    background-color: #f4f0ea;
+}
+
+.destacado-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.etiqueta {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-suave);
+}
+
+.destacado-texto h2 {
+    font-family: var(--fuente-titulo);
+    font-size: 2.2rem;
+    margin: 0.5rem 0 1rem 0;
+    font-weight: 400;
+}
+
+.destacado-texto h3 {
+    font-family: var(--fuente-titulo);
+    font-size: 1.8rem;
+    margin: 0.5rem 0 1rem 0;
+    font-weight: 400;
+}
+
+.destacado-texto p {
+    color: var(--color-suave);
+    margin-bottom: 1.5rem;
+}
+
+.enlace-mas {
+    color: var(--color-acento);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.enlace-mas:hover {
+    text-decoration: underline;
+}
+
+/* Estilos exclusivos para las imágenes del catálogo */
+.cards-grid .card .card.img,
+.catalogo-img {
+    width: 100% !important;
+    max-width: 600px !important;
+    height: 300px !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: auto !important;
+
+}
+
+/* ==========================================
+   TÍTULOS Y PRECIOS DEL CATÁLOGO
+   ========================================== */
+.titulo-seccion h1 {
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.subtitulo-catalogo {
+  font-family: 'Cormorant Garamond', serif;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.titulo-libro-destacado {
+  margin: 0.5rem 0 1rem 0;
+  line-height: 1.2;
+}
+
+.titulo-principal {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  color: #2b414e;
+  font-weight: bold;
+  display: block;
+}
+
+.subtitulo-principal {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  color: #c87d55;
+  font-style: italic;
+  display: block;
+  margin-top: 4px;
+}
+
+/* Tarjetas de Selección de Formato / Precio */
+.bloque-precio-formato {
+  display: flex;
+  gap: 12px;
+  margin: 1.5rem 0;
+}
+
+.opcion-formato {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 16px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.opcion-formato.activo {
+  border-color: #2b414e;
+  background-color: #f0f4f8;
+}
+
+.tipo-formato {
+  font-size: 0.8rem;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.precio {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #111;
+}
+
+/* Botones de Compra */
+.contenedor-botones-compra {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.btn-comprar {
+  background-color: #2b414e;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+
+.btn-comprar:hover {
+  background-color: #1a2a34;
+}
+
+.btn-carrito {
+  background: #ffffff;
+  border: 1px solid #2b414e;
+  color: #2b414e;
+  padding: 12px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.btn-carrito:hover {
+  background: #f0f4f8;
+}

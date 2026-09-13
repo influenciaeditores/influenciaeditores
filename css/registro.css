@@ -1,0 +1,163 @@
+
+/* ==========================================
+             PÁGINA DE REGISTRO
+   ========================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+
+.register-header {
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.register-logo {
+  max-width: 50px;
+  height: 30px;
+  display: inline-block;
+  margin: 10px;
+  align-items: left;
+}
+
+.register-container {
+  max-width: 440px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f9fa;
+  color: #2b2b2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 20px;
+}
+
+
+.form-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 32px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e9ecef;
+}
+
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #6c757d;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.optional {
+  font-weight: normal;
+  color: #6c757d;
+  font-size: 0.8rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background-color: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+select {
+  cursor: pointer;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #4a6da7;
+  box-shadow: 0 0 0 3px rgba(74, 109, 167, 0.15);
+}
+
+/* Estado de error en inputs */
+input.input-error {
+  border-color: #dc3545;
+}
+
+input.input-error:focus {
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.15);
+}
+
+.error-message {
+  display: none;
+  color: #dc3545;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+.form-terms {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+.form-terms a, .form-footer a {
+  color: #4a6da7;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.form-terms a:hover, .form-footer a:hover {
+  text-decoration: underline;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background-color: #2b2b2b;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+  background-color: #404040;
+}
+
+.form-footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+
+
+

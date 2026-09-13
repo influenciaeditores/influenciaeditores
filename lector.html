@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visor de ePub</title>
+
+  <!-- Estilos base y exclusivos del visor -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/lector.css">
+  <link rel="stylesheet" href="css/header.css">
+
+  <!-- Librería ePub.js y JSZip (necesarios para leer el archivo .epub) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/epubjs/dist/epub.min.js"></script>
+</head>
+<body class="lector-body">
+
+  <!-- Barra superior de controles -->
+  <header class="lector-header">
+   <div class="lector-nav-left">
+  <a href="index.html" class="btn-volver">&larr; Volver</a>
+  <span id="book-title" class="book-title">Cargando libro...</span>
+  
+  <!-- Menú desplegable para el Índice / Tabla de Contenidos -->
+  <select id="toc-select" class="toc-select">
+    <option value="">Índice...</option>
+  </select>
+</div>
+    <a href="index.html" class="logo-enlace">
+       <img src="logo2.gif" alt="Logo Influenciaeditores" class="imagen-logo">
+        <span class="texto-logo">Influenciaeditores</span>
+        </a>
+
+    <div class="lector-controls">
+      <!-- Ajuste de fuente -->
+      <button id="font-decrease" title="disminuir letra">A-</button>
+      <button id="font-increase" title="Aumentar letra">A+</button>
+      
+      <!-- Selector de Tema -->
+      <button id="theme-light" class="btn-theme">Claro</button>
+      <button id="theme-dark" class="btn-theme">Oscuro</button>
+      <button id="theme-sepia" class="btn-theme">Sepia</button>
+    </div>
+
+    <button id="view-single" class="btn-theme" title="Página sencilla">1 Pág</button>
+    <button id="view-double" class="btn-theme" title="Doble Página">2 Págs</button>
+  </header>
+
+  <!-- Área principal de lectura -->
+  <main class="lector-container">
+    <button id="prev" class="nav-arrow left-arrow">&lsaquo;</button>
+    
+    <!-- Aquí es donde ePub.js dibujará el contenido del libro -->
+    <div id="viewer" class="epub-viewer"></div>
+
+    <button id="next" class="nav-arrow right-arrow">&rsaquo;</button>
+  </main>
+
+  <!-- Script de inicialización del visor -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/epubjs/dist/epub.min.js"></script>
+
+  <script src="js/lector.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>

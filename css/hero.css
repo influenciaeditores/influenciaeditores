@@ -1,0 +1,179 @@
+/* ==========================================
+   SECCIÓN HERO Y LOGO INTERACTIVO
+   ========================================== */
+.hero {
+    min-height: 60vh;
+    padding: 2rem 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column !important; /* Fuerza el orden vertical: logo arriba, texto abajo */
+    align-items: center !important; /* Centra todos los elementos horizontalmente */
+    text-align: center !important; /* Centra el texto */
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Contenedor forzado al centro */
+.hero-logo-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 350px; /* Ajusta el tamaño del logo */
+    margin-bottom: 0.5%;
+    cursor: pointer;
+}
+
+.hero-logo-container a[data-title]:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    left: var(--x, 50%);
+    top: var(--y, 100%);
+    display: inline-block;
+    background: #0f1419;
+    color: #e6e6e6;
+    font-family: serif;
+    font-style: italic;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    padding: 5px 12px;
+    border: 1px solid #2a343d;
+    border-radius: 2px;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+}
+
+.logo-fijo, 
+.logo-animado {
+    height: 320px; /* Corregido: px en minúscula */
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.logo-animado {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Corregido: translateX para centrar correctamente */
+    height: 320px; /* Corregido: px en minúscula */
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+.hero-logo-container:hover .logo-animado {
+    opacity: 1;
+}
+
+.cursor-tooltip {
+    position: fixed;
+    background: #0f1419; /* Corregido: punto y coma faltante */
+    color: #e6e6e6;
+    font-family: serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    padding: 5px 12px;
+    border: 1px solid #2a343d;
+    border-radius: 2px;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+    z-index: 1000;
+}
+
+/* Elimina cualquier espacio superior heredado en el subtítulo */
+.hero-content .subtitulo {
+    justify-content: center;
+}
+
+.subtitulo {
+    display: block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-suave);
+    margin-bottom: 0.8rem;
+}
+
+.hero h1 {
+    font-family: var(--fuente-titulo);
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 0.8;
+    margin-bottom: 0.8rem;
+    color: var(--color-texto);
+}
+
+.descripcion {
+    font-size: 1.15rem;
+    color: var(--color-suave);
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+.hero-botones {
+    display: flex;
+    margin-bottom: 1rem;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border-radius: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-principal {
+    background-color: var(--color-texto);
+    color: var(--color-fondo);
+}
+
+.btn-principal:hover {
+    background-color: var(--color-acento);
+}
+
+.btn-secundario {
+    border: 1px solid var(--color-texto);
+    color: var(--color-texto);
+}
+
+.btn-secundario:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Estilo sobrio y editorial para el aviso directo en la etiqueta <a> */
+.hero-logo-container a[title] {
+    position: relative;
+}
+
+/* ==========================================
+   ESTILO PARA LA PORTADA REAL
+   ========================================== */
+.imagen-portada-real {
+    width: 100%;
+    max-width: 400px; /* Controla el ancho máximo de la portada */
+    height: auto;
+    display: block;
+    margin-left: auto; /* Corregido: guion agregado */
+    margin-right: 0; /* Corregido: guion y punto y coma agregados */
+    border-radius: 4px;
+    box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.15); /* Sombra elegante */
+}
+
+/* Alinea los textos de la sección destacada a la izquierda */
+.destacado-texto { 
+    text-align: left;
+}
+

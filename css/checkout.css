@@ -1,0 +1,234 @@
+/* css/checkout.css */
+
+body {
+  background-color: #f8f9fa;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
+.paso-seguro {
+  font-size: 0.9rem;
+  color: #2e7d32;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.checkout-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 20px;
+}
+
+.titulo-checkout {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  color: #2b414e;
+  margin-bottom: 1.5rem;
+}
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Tarjetas contenedor */
+.bloque-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.bloque-card h2 {
+  font-size: 1.1rem;
+  color: #2b414e;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Formularios */
+.form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo label {
+  font-size: 0.85rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.campo input {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.campo input:focus {
+  border-color: #2b414e;
+}
+
+/* Métodos de Pago */
+.opciones-pago {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.tarjeta-metodo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #e0e0e0;
+  padding: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tarjeta-metodo:hover,
+.tarjeta-metodo.activo {
+  border-color: #2b414e;
+  background-color: #f0f4f8;
+}
+
+.info-metodo {
+  display: flex;
+  flex-direction: column;
+}
+
+.nombre-metodo {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.sub-metodo {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.btn-pagar {
+  width: 100%;
+  background-color: #2b414e;
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-pagar:hover {
+  background-color: #1a2a34;
+}
+
+.nota-seguridad {
+  font-size: 0.78rem;
+  color: #777;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+/* Resumen del Pedido */
+.resumen-card {
+  position: sticky;
+  top: 20px;
+}
+
+.producto-detalle {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.resumen-portada {
+  width: 60px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.resumen-info h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  margin: 0;
+  color: #111;
+}
+
+.resumen-sub {
+  font-size: 0.78rem;
+  color: #666;
+  margin: 2px 0 6px 0;
+}
+
+.resumen-formato {
+  font-size: 0.75rem;
+  background: #e2e8f0;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.divisor {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 12px 0;
+}
+
+.linea-precio {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.linea-precio.total {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #111;
+  margin-top: 10px;
+}
+
+.gratis {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.garantia-box {
+  background: #f4f6f8;
+  border-left: 3px solid #2b414e;
+  padding: 10px;
+  margin-top: 15px;
+  font-size: 0.8rem;
+  color: #444;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+}

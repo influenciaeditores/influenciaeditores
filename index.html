@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Influenciaeditores</title>
+    
+    <!-- Fuentes tipográficas de alta calidad desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Hoja de estilos CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/section.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+
+    
+</head>
+<body>
+
+    <!-- Encabezado y Navegación Principal -->
+      <header class="main-header">
+        <a href="index.html" class="logo-enlace">
+            <img src="logo.png" alt="Logo Influenciaeditores" class="imagen-logo">
+        <span class="texto-logo">Influenciaeditores</span>
+        </a>
+        <nav class="nav">
+            <!-- Navegación de secciones -->
+            <div class="nav-left">
+                <a href="index.html" class="link-login">Inicio</a>
+                <a href="catalogo.html" class="link-login">Catálogo</a>
+                <a href="#nosotros" class="link-login">Nosotros</a>
+                <a href="#contacto" class="link-login">Contacto</a>
+            </nav>
+        </div>
+
+    <!-- Grupo de la derecha: Acceso de usuarios-->
+     <div class="nav-right">
+        <nav class="nav-container">
+
+
+  <!-- GRUPO 1: Visibles solo cuando NO hay sesión (Invitado) -->
+  <div id="nav-guest" class="nav-user-controls">
+    <a href="login.html" class="btn-login">Iniciar Sesión</a>
+    <a href="Registro.html" class="btn-registro">Registrarse</a>
+  </div>
+
+    
+
+</nav>
+
+    </header>
+
+   
+     
+
+<section class="hero">
+    <div class="hero-content">
+        <!-- 1. LOGO ARRIBA -->  
+    <div class="hero-logo-container">
+            <!-- Logo estático (tu PNG normal) -->
+    <a href="publica.html" data-title="Publica con nosotros">
+    <img src="logo2.png" alt="Influenciaeditores" class="logo-fijo">
+    <!-- Logo animado (tu nuevo GIF) -->
+    <img src="logo2.gif" alt="Influencieditores" class="logo-animado">
+    </a>
+</div>
+    
+        
+    <!-- 2. TEXTOS DEBAJO DEL LOGO --> 
+    <span class="subtitulo">Publicaciones & Colecciones</span>
+            <h1><br>Yo solo Sé Hacer Libros.</h1>
+             <p style="font-family: 'Cormorant Garamond', serif; text-align: center; margin-bottom: 0.5rem; font-size: 1.3rem; color: #666;">
+        Regístrate y accede a la biblioteca digital.
+        
+        
+             </p>
+
+
+            <div class="hero-botones">
+                <a href="catalogo.html" class="btn btn-principal">Explorar Catálogo</a>
+                <a href="#nosotros" class="btn btn-secundario">Conocer el Proyecto</a>
+            </div>
+
+        
+        </div>
+        
+    </section>
+
+  
+
+    <!-- Pie de página -->
+    <footer class="site-footer">
+<!-- Contenedor interno que centra y limita el ancho -->       
+  <div class="footer-wrapper">
+    <div class="footer-grid">
+        <!-- Columna 1: Marca -->
+    <div class="footer-col brand-col">
+        <img src="logo.png" alt="Logo" class="footer-logo">
+    
+      <p class="footer-tagline">
+        <i>Puedo ver y decir y escribir.</i>
+      </p>
+    </div>
+    <!-- Columna2: Navegación -->
+
+    <div class="footer-col">
+      <span class="footer-title">Explorar</span>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="#novedades">Novedades</a></li>
+        <li><a href="registro.html">Crear cuenta</a></li>
+        <li><a href="login.html">Inicia sesión</a></li>
+      </ul>
+    </div>
+<!-- Columna 3: Cuenta/Registro -->
+    <div class="footer-col">
+      <span class="footer-title">Información</span>
+      <ul>
+        <li><a href="#">Términos y Condiciones</a></li>
+        <li><a href="#">Política de Privacidad</a></li>
+        <li><a href="#">Preguntas Frecuentes</a></li>
+        <li><a href="#">Centro de Ayuda</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+    </div>
+<!-- Columna 4: Comunidad-->
+    <div class="footer-col">
+      <span class="footer-title">Comunidad</span>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="X/Twitter">Twitter</a>
+      </div>
+    </div>
+
+  </div>
+<!-- Línea divisoria y barra inferior-->
+  <div class="footer-bottom">
+
+        <p>&copy; 2026 Influencia Editorial. Todos los derechos reservados.</p>
+        </div> 
+    </footer>
+
+    <script>
+    const logoLink = document.querySelector('.logo-link');
+    let tooltipBox = null;
+
+    logoLink.addEventListener('mouseenter', (e) => {
+        const titleText = logoLink.getAttribute('title');
+        if (!titleText) return;
+
+        // Quita el title nativo temporalmente para que no se duplique con el del navegador
+        logoLink.setAttribute('data-title', titleText);
+        logoLink.removeAttribute('title');
+
+        // Crea el elemento flotante al vuelo
+        tooltipBox = document.createElement('div');
+        tooltipBox.className = 'cursor-tooltip';
+        tooltipBox.textContent = titleText;
+        document.body.appendChild(tooltipBox);
+    });
+
+    logoLink.addEventListener('mousemove', (e) => {
+        if (tooltipBox) {
+            tooltipBox.style.left = `${e.clientX + 12}px`;
+            tooltipBox.style.top = `${e.clientY + 12}px`;
+        }
+    });
+
+    logoLink.addEventListener('mouseleave', () => {
+        if (tooltipBox) {
+            tooltipBox.remove();
+            tooltipBox = null;
+        }
+        // Restaura el atributo title
+        const originalTitle = logoLink.getAttribute('data-title');
+        if (originalTitle) {
+            logoLink.setAttribute('title', originalTitle);
+        }
+    });
+</script>
+
+<script>
+document.querySelector('.hero-logo-container a').addEventListener('mousemove', (e) => {
+    e.currentTarget.style.setProperty('--x', e.offsetX + 12 + 'px');
+    e.currentTarget.style.setProperty('--y', e.offsetY + 12 + 'px');
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/nav.js"></script>
+</body>
+</html>

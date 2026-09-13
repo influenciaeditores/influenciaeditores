@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Influenciaeditores</title>
+    
+    <!-- Fuentes tipográficas de alta calidad desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Hoja de estilos CSS -->
+  
+    <link rel="stylesheet" href="css/section.css"> 
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    
+</head>
+<body>
+
+    <!-- Encabezado y Navegación Principal -->
+      <header class="main-header">
+        <a href="index.html" class="logo-enlace">
+            <img src="logo.png" alt="Logo Influenciaeditores" class="imagen-logo">
+        <span class="texto-logo">Influenciaeditores</span>
+        </a>
+        <nav class="nav">
+            <!-- Navegación de secciones -->
+            <div class="nav-left">
+                <a href="index.html" class="link-login">Inicio</a>
+                <a href="catalogo.html" class="link-login">Catálogo</a>
+                <a href="#nosotros" class="link-login">Nosotros</a>
+                <a href="#contacto" class="link-login">Contacto</a>
+            </nav>
+        </div>
+
+    <!-- Grupo de la derecha: Acceso de usuarios-->
+     <div class="nav-right">
+         <nav class="nav-container">
+  
+
+  <!-- GRUPO 1: Visibles solo cuando NO hay sesión (Invitado) -->
+  <div id="nav-guest" class="nav-user-controls">
+    <a href="login.html" class="btn-secondary">Iniciar Sesión</a>
+    <a href="Registro.html" class="btn-primary">Registrarse</a>
+  </div>
+
+  <!-- GRUPO 2: Visibles solo cuando SÍ hay sesión (Usuario autenticado) -->
+  <div id="nav-user" class="nav-user-controls" style="display: none;">
+    <a href="biblioteca.html" class="btn-biblioteca">Mi Biblioteca</a>
+    <span id="user-display-name" class="user-name"></span>
+    <button id="btn-logout" class="btn-logout">Cerrar Sesión</button>
+  </div>
+</nav>
+            </div>
+    </header>
+
+     <!-- ¡Publica con nosotros! -->
+    <section class="seccion-¡Publica con nosotros!-general">
+        <div class="titulo-seccion">
+            <h1>¡Publica con nosotros!</h1>
+            <a href="login.html" class="btn btn-principal">Iniciar Sesión</a>
+            <p style="font-family: Cormorant Garamond;">¿No eres usuario aún?, <a href="Registro.html" class="texto-enlace">Regístrate</a></p>
+        </div>
+        <script src="js/nav.js"></script>
+    </section>

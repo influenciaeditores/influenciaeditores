@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Influenciaeditores - Finalizar Compra</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Hojas de estilos base -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+
+  <!-- Encabezado Simplificado para mantener el foco en la compra -->
+  <header class="main-header">
+    <a href="index.html" class="logo-enlace">
+      <img src="logo.png" alt="Logo Influenciaeditores" class="imagen-logo">
+      <span class="texto-logo">Influenciaeditores</span>
+    </a>
+    <div class="paso-seguro">
+      <span>🔒 Pago 100% Seguro</span>
+    </div>
+  </header>
+
+  <main class="checkout-container">
+    <h1 class="titulo-checkout">Resumen y Pago</h1>
+
+    <div class="checkout-grid">
+      
+      <!-- Columna Izquierda: Métodos de Pago y Datos -->
+      <section class="checkout-seccion-pago">
+        
+        <div class="bloque-card">
+          <h2>1. Datos del Comprador</h2>
+          <form id="form-comprador" class="form-grid">
+            <div class="campo">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" placeholder="Ej. Ana María Gómez" required>
+            </div>
+            <div class="campo">
+              <label for="email">Correo electrónico (donde recibirás el acceso)</label>
+              <input type="email" id="email" placeholder="correo@ejemplo.com" required>
+            </div>
+          </form>
+        </div>
+
+        <div class="bloque-card">
+          <h2>2. Selecciona tu medio de pago</h2>
+          
+          <div class="opciones-pago">
+            <!-- Opción Wompi (Nacional) -->
+<div class="tarjeta-metodo activo">
+  <input type="radio" name="metodo_pago" value="wompi" id="pago-wompi" checked>
+  <label for="pago-wompi">Pago Nacional (Wompi)</label>
+</div>
+
+<!-- Opción PayPal (Internacional) -->
+<div class="tarjeta-metodo">
+  <input type="radio" name="metodo_pago" value="paypal" id="pago-paypal">
+  <label for="pago-paypal">Pago Internacional (PayPal)</label>
+</div>
+          </div>
+
+          <button id="btn-procesar-pago" class="btn-pagar">
+            Pagar $29.800 COP
+          </button>
+          
+          <p class="nota-seguridad">
+            Al hacer clic, serás redirigido a la plataforma segura de la pasarela para autorizar tu transacción.
+          </p>
+        </div>
+
+      </section>
+
+      <!-- Columna Derecha: Detalle del Pedido -->
+      <aside class="checkout-resumen">
+        <div class="bloque-card resumen-card">
+          <h2>Detalle de la Orden</h2>
+          
+          <div class="producto-detalle">
+            <img src="portadaSerpientes.png" alt="Portada Libro" class="resumen-portada">
+            <div class="resumen-info">
+              <h3 id="resumen-titulo">Serpientes</h3>
+              <p class="resumen-sub">Nacimiento ideal de los soles...</p>
+              <span class="resumen-formato">Edición Digital (ePub)</span>
+            </div>
+          </div>
+
+          <hr class="divisor">
+
+          <div class="linea-precio">
+            <span>Subtotal</span>
+            <span>$29.800 COP</span>
+          </div>
+          <div class="linea-precio">
+            <span>Envío Digital</span>
+            <span class="gratis">GRATIS</span>
+          </div>
+
+          <hr class="divisor">
+
+          <div class="linea-precio total">
+            <span>Total a Pagar</span>
+            <span id="resumen-total">$29.800 COP</span>
+          </div>
+
+          <div class="garantia-box">
+            <p>📖 <strong>Acceso Inmediato:</strong> Tras el pago, tu libro estará listo para leer en "Mi Biblioteca".</p>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Influenciaeditores. Todos los derechos reservados.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/checkout.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+
+
+/* ==========================================
+   HEADER / NAVEGACIÓN
+   ========================================== */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    width: 100%;
+    background-color: var(--color-fondo);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+.logo {
+    font-family: var(--fuente-titulo);
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--color-texto);
+    
+}
+
+.nav-left{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #333333;
+    font-size: 0.95rem;
+    
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
+    
+}
+
+.nav-links a, .link-login {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-size: 0.85rem;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .link-login:hover {
+    color: var(--color-acento);
+}
+
+.btn-registro {
+    text-decoration: none;
+    color: var(--color-fondo);
+    background-color: var(--color-texto);
+    padding: 0.35rem 0.9rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-registro:hover {
+    background-color: var(--color-acento);
+}
+
+.btn-login {
+    text-decoration: none;
+    color: var(--color-fondo);
+    background-color: var(--color-texto);
+    padding: 0.35rem 0.9rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: var(--color-acento);
+}
+
+/* ==========================================
+   ESTILOS PARA EL LOGO EN EL ENCABEZADO
+   ========================================== */
+.logo-enlace {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espacio entre la imagen y el texto del logo */
+    text-decoration: none;
+}
+
+.imagen-logo {
+    height: 50px; /* Controla la altura del logo (ajústala según prefieras) */
+    width: auto; /* Mantiene la proporción original de la imagen */
+    display: block;
+    
+}
+
+.texto-logo {
+    font-family: var(--fuente-titulo);
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--color-texto);
+    margin-right: 40px;
+}
+
+
+
+
+

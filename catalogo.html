@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Influenciaeditores - Catálogo</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Hojas de estilos -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/section.css">
+</head>
+<body>
+
+  <!-- Encabezado y Navegación Principal -->
+  <header class="main-header">
+    <a href="index.html" class="logo-enlace">
+      <img src="logo.png" alt="Logo Influenciaeditores" class="imagen-logo">
+      <span class="texto-logo">Influenciaeditores</span>
+    </a>
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="index.html" class="link-login">Inicio</a>
+        <a href="catalogo.html" class="link-login">Catálogo</a>
+        <a href="#nosotros" class="link-login">Nosotros</a>
+        <a href="#contacto" class="link-login">Contacto</a>
+      </div>
+    </nav>
+
+    <div class="nav-right">
+      <a href="login.html" class="btn-login">Iniciar Sesión</a>
+      <a href="registro.html" class="btn-registro">Registrarse</a>
+    </div>
+  </header>
+
+  <!-- Contenido Principal del Catálogo -->
+  <main class="seccion-catalogo-general">
+    <div class="titulo-seccion">
+      <h1>Nuestro Catálogo</h1>
+      <p class="subtitulo-catalogo">Explora las colecciones vigentes de nuestro sello editorial.</p>
+    </div>
+
+    <!-- Ficha Destacada del Libro -->
+    <section id="catalogo" class="destacado">
+      <div class="destacado-grid">
+        
+        <!-- Portada del libro -->
+        <div class="destacado-imagen">
+          <img src="portadaSerpientes.png" alt="Portada del libro Serpientes" class="catalogo-img">
+        </div>
+
+        <!-- Información de la obra -->
+        <div class="destacado-texto">
+          <span class="etiqueta">Novedad Editorial</span>
+          
+          <h2 class="titulo-libro-destacado">
+            <span class="titulo-principal">Serpientes:</span>
+            <span class="subtitulo-principal">Nacimiento ideal de los soles, Infancia de las flores</span>
+          </h2>
+
+          <p class="autor-obra"><strong>Autor:</strong> Juan Camilo Cortes</p>
+          <p class="descripcion-obra">
+            Una exploración poética sobre la memoria, la naturaleza y la renovación del pensamiento.
+          </p>
+
+          <!-- Selector de Formato y Precio -->
+          <div class="bloque-precio-formato">
+            <div class="opcion-formato activo">
+              <span class="tipo-formato">Digital (ePub)</span>
+              <span class="precio">$29.800 COP</span>
+            </div>
+            <div class="opcion-formato">
+              <span class="tipo-formato">Impreso</span>
+              <span class="precio">$45.000 COP</span>
+            </div>
+          </div>
+
+          <!-- Botones de Acción -->
+          <div class="contenedor-botones-compra">
+            <!-- Redirige a la página de proceso de pago pasando el ID del libro -->
+            <a href="checkout.html?libro=serpientes&formato=epub" class="btn-comprar">Comprar Ahora</a>
+            <button class="btn-carrito">🛒 Añadir al carrito</button>
+          </div>
+
+          <a href="#" class="enlace-mas">Saber más acerca de esta obra &rarr;</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <p>&copy; 2026 Influenciaeditores. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/catalogo.js"></script>
+</body>
+</html>
